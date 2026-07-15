@@ -61,7 +61,8 @@ npm install
 ```bash
 npm run dev
 ```
-
+npx vite preview --host 0.0.0.0
+npm run dev -- --host 0.0.0.0
 3. Build for production:
 ```bash
 npm run build
@@ -256,6 +257,10 @@ export const fetchUsers = async () => {
 2. Optimized files generated in `dist/`
 3. Deploy to hosting service
 
+sudo rm -rf /var/www/html/*
+
+sudo cp -r dist/* /var/www/html/
+sudo systemctl restart nginx
 ### Environment Variables
 
 ```bash
