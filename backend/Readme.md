@@ -1,6 +1,7 @@
 # Spring Boot Backend Deployment Guide 
 
 ## Prerequisites
+sudo apt install mariadb-client -y
 
 - Java Development Kit (JDK 17 or higher) installed.
 - Maven installed.
@@ -28,6 +29,7 @@ Installing maven in ubuntu:
 ```shell
 apt install maven -y
 ```
+mvn clean package -DskipTests
 
 ### Verify Maven installation:
 
@@ -67,6 +69,7 @@ java -jar target\spring-backend-v1.jar
 The application will start and be accessible at:
 
 http://localhost:8080
+curl http://localhost:8080/api/users
 
 ### Step 5: Keep the Application Running
 
